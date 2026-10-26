@@ -1,0 +1,17 @@
+.DS_Store
+node_modules/
+.env
+.env.*
+*.log
+data/observations/
+preview.png
+matchboard-preview.png
+matchboard-integrated.png
+matchboard-fixed-teams.png
+matchboard-polished.png
+matchboard-mobile.png
+matchboard-watch-guide.png
+*.wgt
+*.p12
+*.pem
+artifacts/

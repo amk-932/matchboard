@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:tizen="http://tizen.org/ns/widgets" id="https://touchline.local" version="0.3.0" viewmodes="maximized">
+  <tizen:application id="Touchline1.Scoreboard" package="Touchline1" required_version="6.0"/>
+  <content src="index.html"/><name>Matchboard</name>
+  <access origin="https://api.openligadb.de" subdomains="false"/>
+  <access origin="https://site.api.espn.com" subdomains="false"/>
+  <access origin="https://a.espncdn.com" subdomains="false"/>
+  <tizen:privilege name="http://tizen.org/privilege/internet"/>
+  <tizen:profile name="tv"/>
+  <tizen:metadata key="http://samsung.com/tv/metadata/devel.api.version" value="6.0"/>
+  <tizen:setting screen-orientation="landscape" context-menu="disable" background-support="disable" encryption="disable" install-location="auto" hwkey-event="enable"/>
+</widget>

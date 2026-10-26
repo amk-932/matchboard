@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#101512"><meta name="description" content="Your football matchday, in one place. Scores, favourite teams and regional viewing guides."><title>Matchboard — Your football, in focus</title><link rel="icon" type="image/svg+xml" href="assets/matchboard-mark.svg"><link rel="stylesheet" href="style.css"></head>
+<body>
+<a class="skip-link" href="#matches">Skip to matches</a>
+<aside class="sidebar" aria-label="Main navigation">
+<a class="brand" href="index.html" aria-label="Matchboard home"><img src="assets/matchboard-mark.svg" width="42" height="42" alt=""><span>Matchboard<small>THE BEAUTIFUL GAME, SIMPLIFIED</small></span></a>
+<div class="nav-label">YOUR SPACE</div>
+<button class="side-link selected" id="nav-home"><span aria-hidden="true">▦</span> Scoreboard</button>
+<button class="side-link" id="nav-follow"><span aria-hidden="true">☆</span> Following</button>
+<button class="side-link" id="open-watch"><span aria-hidden="true">▷</span> Where to watch</button>
+<div class="sidebar-bottom"><div class="sidebar-note"><span class="small-pitch" aria-hidden="true"></span><p>A little less searching.<br>A little more football.</p></div><button class="side-link" id="health"><span aria-hidden="true">◈</span> Data lab</button><span class="build-label">INDEPENDENT FOOTBALL COMPANION · v0.3</span></div>
+</aside>
+<div class="workspace">
+<header><div class="breadcrumb">Your football <span>/</span> <strong id="page-label">Scoreboard</strong></div><div class="header-right"><span id="clock"></span><label class="region-control"><span aria-hidden="true">◎</span><span class="sr-only">Viewing region</span><select id="region"><option value="AU">Australia</option><option value="US">United States</option><option value="GB">United Kingdom</option><option value="CA">Canada</option><option value="IN">India</option><option value="OTHER">Other region</option></select></label><button id="refresh" class="icon-button" aria-label="Refresh scores">↻ <span>Refresh</span></button></div></header>
+<main>
+<section class="hero"><div class="hero-copy"><div class="eyebrow"><span class="dot"></span> EVERY MATCH HAS A STORY</div><h1>Your football.<br><span>All in focus.</span></h1><p>From the first whistle to the final score.<br>Make room for the matches that matter.</p><div class="hero-tags"><span>3 competitions</span><span>No account needed</span></div></div><div id="featured" class="featured" aria-label="Featured match"></div></section>
+<section class="board" aria-label="Match scoreboard">
+<div class="board-heading"><div><div class="eyebrow muted">THE MATCH CENTRE</div><h2 id="league-title">Premier League</h2></div><span class="connection" id="connection" role="status">Connecting…</span></div>
+<div class="feed-controls"><label><span class="sr-only">Competition</span><select id="league"><option value="eng.1">Premier League</option><option value="ger.1">Bundesliga</option><option value="uefa.champions">Champions League</option></select></label><label><span class="sr-only">Date range</span><select id="window"><option value="week">Recent &amp; upcoming</option><option value="day">One day</option></select></label><div class="date-controls"><button id="previous" aria-label="Previous day">‹</button><label><span class="sr-only">Date in your timezone</span><input id="match-date" type="date" required></label><button id="next" aria-label="Next day">›</button><button id="today">Today</button></div><label class="source-control"><span class="sr-only">Data source</span><select id="provider"><option value="espn">ESPN</option><option value="openliga">OpenLigaDB</option></select></label></div>
+<div class="filter-row"><nav class="tabs" aria-label="Match filters"><button class="active" data-filter="all" aria-pressed="true">All matches <span id="count-all">0</span></button><button data-filter="live" aria-pressed="false"><i class="live-dot" aria-hidden="true"></i> Live <span id="count-live">0</span></button><button data-filter="finished" aria-pressed="false">Results</button><button data-filter="favourites" aria-pressed="false">My teams ☆</button></nav><span id="round"></span></div>
+<div id="notice" class="notice" role="status"></div><section id="matches" class="match-list" aria-label="Football matches" tabindex="-1"></section>
+</section>
+<section class="watch-strip"><div class="watch-strip-icon" aria-hidden="true">▷</div><div><h3>Your match. Your screen.</h3><p id="watch-summary">Find football coverage in your region.</p></div><button id="watch-guide">Explore viewing options <span aria-hidden="true">↗</span></button></section>
+<footer><span>Matchboard <span class="footer-dot">·</span> Football at a glance.</span><span id="attribution"></span></footer><p class="fine">Independent prototype. Samsung TV installation and home-screen support are still being tested. Club marks belong to their respective owners.</p>
+</main></div>
+<div id="overlay" hidden><section class="dialog" role="dialog" aria-modal="true" aria-labelledby="dialog-title"><button id="close" class="close" aria-label="Close dialog">×</button><div id="dialog-content"></div></section></div>
+<script src="model.js"></script><script src="feed.js"></script><script src="watch.js"></script><script src="data/team-catalog.js"></script><script src="data/snapshot.js"></script><script src="app.js"></script>
+</body></html>
